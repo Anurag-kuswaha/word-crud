@@ -1,0 +1,39 @@
+.align-center {
+  align-items: center;
+  margin-left: 40%;
+  color: #5ecdd4;
+}
+.center {
+  text-align: center;
+  margin-left: 40%;
+  color: #d826d8;
+}
+.equal-wrap {
+  display: flex;
+  width: 100%;
+}
+
+.formBox {
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+button.btn-primary {
+  background-color: #e70cbf;
+  border-radius: 3px;
+  color: #ffffff;
+  margin: 10px;
+  min-height: 30px;
+  min-width: 80px;
+}
+.wordResult{
+  text-align: center;
+}
+.word{
+  color: black;
+  margin: 10px;
+  font-style: unset;
+  font-size: 18px;
+}
