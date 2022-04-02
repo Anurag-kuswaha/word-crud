@@ -48,7 +48,7 @@ function deleteWord(){
         console.log(this);
         e.preventDefault();
         //do ajax call and respond according to the backend result;
-        var form = {'word':$(this).parent().text() };
+        var form = {'word':$(this).parent().text().trim() };
         var url = $('.wordResult').attr('href');
         console.log(url);
         console.log($(this).parent().text());

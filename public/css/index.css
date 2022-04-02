@@ -37,3 +37,7 @@ button.btn-primary {
   font-style: unset;
   font-size: 18px;
 }
+.cross:after{
+  display: inline-block;
+  content: "\00d7"; /* This will render the 'X' */
+}
