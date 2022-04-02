@@ -3,6 +3,13 @@
   margin-left: 40%;
   color: #5ecdd4;
 }
+.desc{
+  text-align: center;
+  color: #af0843b0;
+  font-size: 25px;
+  font-weight: 700;
+  margin:30px;
+}
 .center {
   text-align: center;
   margin-left: 40%;
@@ -11,6 +18,16 @@
 .equal-wrap {
   display: flex;
   width: 100%;
+}
+@media only screen and (max-width: 767px){
+  .equal-wrap {
+    display: inline;
+    width: 100%;
+  }
+  .formBox{
+    text-align: center;
+  }
+ 
 }
 
 .formBox {
