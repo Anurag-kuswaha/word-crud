@@ -1,9 +1,9 @@
 
 function addOrUpdateWord() {
-    console.log('up and running');
+   // console.log('up and running');
     // do ajax call
     $('.wordForm').on('submit', function (e) {
-        console.log('hits the ajax');
+        //console.log('hits the ajax');
         e.preventDefault();
         //do ajax call and respond according to the backend result;
         var form = $(this);
@@ -14,7 +14,7 @@ function addOrUpdateWord() {
             dataType: 'json',
             data: form.serialize(),
             success: function (data) {
-                console.log(data);
+                //console.log(data);
                 var toastHtml = '';
                 if (data.success) {
                     toastHtml = `<p class="success"> ${data.message} </p> `;
@@ -26,7 +26,7 @@ function addOrUpdateWord() {
                     let newListHtml = data.data.map(element => {
                         return `<div class="word"> ${element.word}  <span class="cross"> </span></div>`;
                     });
-                    console.log(newListHtml);
+                    //console.log(newListHtml);
                     $('.wordResult').empty().append(newListHtml);
                 }
                 $('.toastInfo').empty().append(toastHtml);
@@ -45,20 +45,20 @@ function addOrUpdateWord() {
 function deleteWord() {
 
     $(".wordResult span").on('click', function (e) {
-        console.log(this);
+        //console.log(this);
         e.preventDefault();
         //do ajax call and respond according to the backend result;
         var form = { 'word': $(this).parent().text().trim() };
         var url = $('.wordResult').attr('href');
-        console.log(url);
-        console.log($(this).parent().text());
+       // console.log(url);
+       // console.log($(this).parent().text());
         $.ajax({
             url: url,
             type: 'post',
             dataType: 'json',
             data: form,
             success: function (data) {
-                console.log(data);
+                //console.log(data);
                 var toastHtml = '';
                 if (data.success) {
                     toastHtml = `<p class="success"> ${data.message} </p> `;
@@ -70,7 +70,7 @@ function deleteWord() {
                     let newListHtml = data.data.map(element => {
                         return `<div class="word"> ${element.word}<span class="cross"> </span> </div>`;
                     });
-                    console.log(newListHtml);
+                    //console.log(newListHtml);
                     $('.wordResult').empty().append(newListHtml);
                 }
                 $('.toastInfo').empty().append(toastHtml);

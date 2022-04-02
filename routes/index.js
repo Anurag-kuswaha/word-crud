@@ -10,8 +10,8 @@ router.get('/', async function (req, res, next) {
   res.render('homepage', { 'Words': allWords });
 });
 
-/* GET all word. */
-router.get('/', async function (req, res, next) {
+/* GET all word.- Deprecated */
+router.get('/getAll', async function (req, res, next) {
   var allWords = await wordsDB.find();
   console.log(allWords);
   res.statusCode = 200;
@@ -49,7 +49,7 @@ router.post('/add', async function (req, res, next) {
         });
     }
   }
-
+  else return res.json({ success: false, message: 'no input given' });
 });
 
 /*  update word. */
