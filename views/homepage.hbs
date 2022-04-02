@@ -3,22 +3,22 @@
   <div class="equal-wrap">
     <div class="formBox">
       <form action="/add" method="POST" class="wordForm">
-        <input type="text" class="form-control" id="word" name="word" placeholder="Enter Anything"><br>
+        <input type="text" class="form-control" id="word" name="word" placeholder="Enter word"><br>
         <button type="submit" class="btn btn-primary mb-2">Add</button>
 
       </form>
     </div>
     <div class="formBox">
       <form action="/update" method="POST" class="wordForm">
-        <input type="text" class="form-control" id="word" name="word" placeholder="Enter Anything"><br>
-         <input type="text" class="form-control" id="newWord" name="newWord" placeholder="Enter Anything"><br>
+        <input type="text" class="form-control" id="word" name="word" placeholder="Enter word"><br>
+         <input type="text" class="form-control" id="newWord" name="newWord" placeholder="Enter word"><br>
         <button type="submit" class="btn btn-primary mb-2"> update</button>
 
       </form>
     </div>
     <div class="formBox">
       <form action="/delete" method="POST" class="wordForm">
-        <input type="text" class="form-control" id="word" name="word" placeholder="Enter Anything"><br>
+        <input type="text" class="form-control" id="word" name="word" placeholder="Enter word"><br>
         <button type="submit" class="btn btn-primary mb-2"> Delete</button>
 
       </form>
@@ -27,7 +27,7 @@
  <h1 class="align-center"> Databse Word List </h1>
  <div class="wordResult" href="/delete">
  {{#each Words as |val key|}}
-         <div class="word">   {{val.word}} <span class="cross"> CROSS</span></div>
+         <div class="word">   {{val.word}} <span class="cross"> </span></div>
  {{/each}}
  </div>
   
