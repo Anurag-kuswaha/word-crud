@@ -10,7 +10,7 @@ const port = process.env.PORT || 5002;
 var app = express();
 const mongoose = require('mongoose');
 const url = process.env.MONGODB_URL || 'mongodb+srv://anurag:anurag@cluster0.0qqig.mongodb.net/wordStore?retryWrites=true&w=majority';
-const connect = mongoose.connect(url);
+const connect = mongoose.connect(url); 
 connect.then(()=>{
   console.log('connected to DB successfully');
 }).catch(e =>{
