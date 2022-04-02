@@ -24,7 +24,7 @@ $('.wordForm').on('submit', function (e) {
             }
             if(data.data){
                 let newListHtml = data.data.map(element => {
-                    return `<div class="word"> ${element.word} </div>`;
+                    return `<div class="word"> ${element.word}  <span class="cross"> </span></div>`;
                 });
                 console.log(newListHtml);
                 $('.wordResult').empty().append(newListHtml);
@@ -44,7 +44,7 @@ $('.wordForm').on('submit', function (e) {
 }
 function deleteWord(){
     
-    $('.cross').on('click', function (e) {
+    $(".wordResult span").on( 'click', function (e) {
         console.log(this);
         e.preventDefault();
         //do ajax call and respond according to the backend result;
@@ -68,7 +68,7 @@ function deleteWord(){
                 }
                 if(data.data){
                     let newListHtml = data.data.map(element => {
-                        return `<div class="word"> ${element.word} </div>`;
+                        return `<div class="word"> ${element.word}<span class="cross"> </span> </div>`;
                     });
                     console.log(newListHtml);
                     $('.wordResult').empty().append(newListHtml);
@@ -88,3 +88,6 @@ function deleteWord(){
 }
 addOrUpdateWord();
 deleteWord();
+$( document ).ajaxComplete(function() {
+    deleteWord();
+  });
